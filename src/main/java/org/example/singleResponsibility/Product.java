@@ -1,4 +1,4 @@
-package org.example;
+package org.example.singleResponsibility;
 
 import java.util.*;
 //SRP :  a class should have one reason to change

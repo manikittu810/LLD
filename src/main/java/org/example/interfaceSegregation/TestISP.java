@@ -22,6 +22,7 @@ class Robot implements Workable{
         System.out.println("When AI/Robots starts working, humans start to procrastinate");
     }
 }
+
 public class TestISP {
     public static void main(String[] args) {
         Human obj = new Human();
@@ -34,5 +35,7 @@ public class TestISP {
 
         System.out.println("Robot Functionalities : ");
         obj1.work();
+
+
     }
 }

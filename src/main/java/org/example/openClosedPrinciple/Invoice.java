@@ -51,3 +51,4 @@ class TestOpenClosed{
         obj4.save(obj);
     }
 }
+//This Code Implements both SRP and OCP

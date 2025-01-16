@@ -22,7 +22,7 @@ class ProcessPayment{
     public ProcessPayment(PaymentService paymentService){
         this.paymentService= paymentService;
     }
-public void setPaymentService(){
+public void process(){
     paymentService.processPayment();
     }
 }
@@ -30,10 +30,10 @@ public class TestPayment {
     public static void main(String[] args) {
         PayPalPayment paypal = new PayPalPayment();
         ProcessPayment processPayment = new ProcessPayment(paypal);
-        processPayment.setPaymentService();
+        processPayment.process();
 
         StripePalPayment stripe = new StripePalPayment();
         ProcessPayment processPayment1 = new ProcessPayment(stripe);
-        processPayment1.setPaymentService();
+        processPayment1.process();
     }
 }

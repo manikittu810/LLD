@@ -74,6 +74,7 @@ class FordCarFactory implements CarFactory{
 }
 public class TestCarManufacturing {
     public static void main(String[] args) throws RuntimeException{
+        //There is a scope for removing code redundancy below by using a method
         CarFactory carFactory = new TataCarFactory();
         SUV suv = carFactory.createSUV();
         Sedan sedan = carFactory.createSedan();

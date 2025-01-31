@@ -73,23 +73,34 @@ class FordCarFactory implements CarFactory{
     }
 }
 public class TestCarManufacturing {
-    public static void main(String[] args) throws RuntimeException{
-        //There is a scope for removing code redundancy below by using a method
-        CarFactory carFactory = new TataCarFactory();
+    public static void main(String[] args){
+        manufactureCars(new TataCarFactory());
+        manufactureCars(new FordCarFactory());
+    }
+    //Implemented to reduce code redundancy
+    public static void manufactureCars(CarFactory carFactory){
         SUV suv = carFactory.createSUV();
         Sedan sedan = carFactory.createSedan();
         Hatchback hatchback = carFactory.createHatchback();
+
         suv.manufactureCarType();
+        try{
+                Thread.sleep(200);
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+        }
         sedan.manufactureCarType();
+        try{
+            Thread.sleep(200);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
         hatchback.manufactureCarType();
-
-
-        CarFactory carFactory2 = new FordCarFactory();
-        SUV suv2 = carFactory2.createSUV();
-        Sedan sedan2 = carFactory2.createSedan();
-        Hatchback hatchback2 = carFactory2.createHatchback();
-        suv2.manufactureCarType();
-        sedan2.manufactureCarType();
-        hatchback2.manufactureCarType();
+        try{
+            Thread.sleep(200);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
     }
+
 }
